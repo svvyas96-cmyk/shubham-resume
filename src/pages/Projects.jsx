@@ -99,7 +99,7 @@ export default function Projects() {
             </div>
 
             <div className="project-block">
-              <h4>Impact</h4>
+              <h4>🚀 Impact</h4>
               <ul>
                 {project.impact.map((item, i) => (
                   <li key={i}>{item}</li>
@@ -108,7 +108,7 @@ export default function Projects() {
             </div>
 
             <div className="project-block">
-              <h4>Key Responsibilities</h4>
+              <h4>⚙️ Key Responsibilities</h4>
               <ul>
                 {project.responsibilities.map((item, i) => (
                   <li key={i}>{item}</li>
@@ -117,7 +117,7 @@ export default function Projects() {
             </div>
 
             <div className="project-block">
-              <h4>Tools Used</h4>
+              <h4>🧰 Tools</h4>
               <div className="project-tools">
                 {project.tools.map((tool, i) => (
                   <span key={i}>{tool}</span>

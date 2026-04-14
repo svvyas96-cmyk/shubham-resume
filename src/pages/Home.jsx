@@ -84,16 +84,32 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="home-section center">
-        <h2>Open to QA Automation Opportunities</h2>
-        <p>
-          I’m available for QA Automation, API Testing, and software testing
-          roles.
-        </p>
-      <Link to="/contact" className="cta-btn">
-          Contact Me
-        </Link>
-      </div>
+   <div className="home-section center cta-section premium-cta">
+  <div className="cta-glow cta-glow-left"></div>
+  <div className="cta-glow cta-glow-right"></div>
+
+  <div className="premium-cta-inner">
+    <p className="cta-tag">Available for Opportunities</p>
+
+    <h2>Open to QA Automation Opportunities</h2>
+
+    <p className="cta-text">
+      I help teams improve product quality through Selenium automation, API
+      validation, regression optimization, and reliable QA processes.
+    </p>
+
+    <div className="cta-points">
+      <span>4+ Years Experience</span>
+      <span>Selenium & API Testing</span>
+      <span>Short Notice Joiner</span>
+    </div>
+
+    <Link to="/contact" className="cta-btn premium-cta-btn">
+      <span className="cta-btn-dot"></span>
+      <span>Contact Me</span>
+    </Link>
+  </div>
+</div>
     </section>
   );
 }

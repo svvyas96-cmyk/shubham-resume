@@ -14,8 +14,8 @@
   display: inline-block;
   padding: 8px 14px;
   border-radius: 999px;
-  background: #eef4ff;
-  color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 12px;
@@ -24,14 +24,14 @@
 .about-header h2 {
   font-size: clamp(24px, 4vw, 34px);
   margin-bottom: 10px;
-  color: #111827;
+  color: var(--text-main);
   line-height: 1.2;
 }
 
 .about-intro {
   max-width: 700px;
   margin: 0 auto;
-  color: #4b5563;
+  color: var(--text-body);
   line-height: 1.7;
   font-size: clamp(14px, 2vw, 16px);
   padding: 0 10px;
@@ -46,56 +46,78 @@
 }
 
 .about-card {
-  background: #f8fbff;
-  border: 1px solid #e5edf8;
+  background: linear-gradient(180deg, var(--bg-card-solid) 0%, var(--bg-soft) 100%);
+  border: 1px solid var(--border);
   border-radius: 18px;
   padding: clamp(18px, 3vw, 22px);
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   min-width: 0;
 }
 
 .about-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+body.dark-theme .about-card:hover {
+  box-shadow: 0 18px 34px rgba(2, 6, 23, 0.28);
 }
 
 .about-card h3 {
   margin-bottom: 12px;
-  color: #111827;
+  color: var(--text-main);
   font-size: clamp(18px, 2.5vw, 20px);
   line-height: 1.3;
 }
 
 .about-card p {
-  color: #444;
+  color: var(--text-body);
   line-height: 1.7;
   font-size: clamp(14px, 2vw, 15px);
 }
 
-.about-card ul {
+.about-card ul,
+.about-list {
   padding-left: 18px;
-  color: #374151;
+  color: var(--text-body);
   line-height: 1.8;
   font-size: clamp(14px, 2vw, 15px);
 }
 
-.about-card li {
+.about-card li,
+.about-list li {
   margin-bottom: 6px;
+}
+
+.about-card li::marker,
+.about-list li::marker {
+  color: var(--primary);
 }
 
 /* STRENGTHS */
 .about-section {
-  background: #fff;
+  background: linear-gradient(180deg, var(--bg-card-solid) 0%, var(--bg-soft) 100%);
   padding: clamp(18px, 3vw, 24px);
   border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  border: 1px solid #eef2f7;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+body.dark-theme .about-section:hover {
+  box-shadow: 0 18px 34px rgba(2, 6, 23, 0.28);
 }
 
 .about-section h3 {
   margin-bottom: 15px;
-  color: #111827;
+  color: var(--text-main);
   font-size: clamp(18px, 2.5vw, 22px);
 }
 
@@ -107,22 +129,29 @@
 
 .strengths span {
   padding: 10px 14px;
-  background: #eef4ff;
-  border: 1px solid #dbeafe;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
   border-radius: 999px;
   font-weight: 600;
   font-size: clamp(13px, 2vw, 14px);
-  color: #1f2937;
+  color: var(--text-main);
   transition: all 0.25s ease;
   white-space: nowrap;
 }
 
 .strengths span:hover {
-  background: #2563eb;
-  color: #fff;
-  border-color: #2563eb;
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(37, 99, 235, 0.16);
+}
+
+/* DARK MODE EXTRA */
+body.dark-theme .strengths span {
+  background: #1e293b;
+  border-color: rgba(148, 163, 184, 0.18);
+  color: #e2e8f0;
 }
 
 /* TABLET */
@@ -142,7 +171,12 @@
     gap: 22px;
   }
 
+  .about-header {
+    text-align: left;
+  }
+
   .about-intro {
+    margin: 0;
     padding: 0;
   }
 
@@ -192,7 +226,8 @@
   }
 
   .about-card p,
-  .about-card ul {
+  .about-card ul,
+  .about-list li {
     font-size: 14px;
   }
 
