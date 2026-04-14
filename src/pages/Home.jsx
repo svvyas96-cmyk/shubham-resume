@@ -34,7 +34,7 @@ export default function Home() {
       <div className="home-section">
         <h2>About Me</h2>
         <p>
-          I am a QA Automation Engineer with 5+ years of experience in manual
+          I am a QA Automation Engineer with 4+ years of experience in manual
           and automation testing for web and API applications. I specialize in
           building scalable automation frameworks, validating backend services,
           and improving software quality through reliable test practices.
@@ -45,7 +45,7 @@ export default function Home() {
         <h2>Key Highlights</h2>
         <div className="highlights">
           <div className="highlight-card">
-            <h3>5+ Years</h3>
+            <h3>4+ Years</h3>
             <p>QA and automation experience</p>
           </div>
 

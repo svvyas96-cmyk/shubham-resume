@@ -10,7 +10,7 @@ export default function About() {
         <p className="about-tag">About Me</p>
         <h2>QA Automation Engineer</h2>
         <p className="about-intro">
-          I am a QA Automation Engineer with 5+ years of experience in ensuring
+          I am a QA Automation Engineer with 4+ years of experience in ensuring
           high-quality software delivery through automation, API testing, and
           manual validation.
         </p>
