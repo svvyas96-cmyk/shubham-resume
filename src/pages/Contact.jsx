@@ -51,7 +51,12 @@ export default function Contact() {
         <div className="contact-form">
           <h3>Send Message</h3>
 
-          <form name="contact" method="POST" data-netlify="true">
+      <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  action="/"
+>
   <input type="hidden" name="form-name" value="contact" />
 
   <input type="text" name="name" placeholder="Your Name" required />
