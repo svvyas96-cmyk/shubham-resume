@@ -37,7 +37,7 @@ export default function App() {
             </h2>
 
             <p className="hero-description">
-              QA Automation Engineer with 5+ years of experience in building
+              QA Automation Engineer with 4+ years of experience in building
               scalable automation frameworks, improving regression efficiency,
               validating APIs, and ensuring high-quality software delivery in
               Agile environments.
@@ -62,7 +62,7 @@ export default function App() {
           <div className="hero-right">
             <div className="hero-card">
               <span>Experience</span>
-              <strong>5+ Years</strong>
+              <strong>4+ Years</strong>
             </div>
 
             <div className="hero-card">
