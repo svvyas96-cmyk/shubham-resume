@@ -1,0 +1,72 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* SECTION */
+.home-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.home-section h2 {
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.home-section p {
+  color: #444;
+  line-height: 1.7;
+}
+
+/* HIGHLIGHTS */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.highlight-card {
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.highlight-card h3 {
+  color: #0077ff;
+  margin-bottom: 5px;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  padding: 10px 14px;
+  background: #eef4ff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* CTA */
+.center {
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #0077ff;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
