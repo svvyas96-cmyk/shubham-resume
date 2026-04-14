@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Success from "./pages/Success";
 
 export default function App() {
   return (
@@ -24,13 +25,16 @@ export default function App() {
           </div>
 
           <div className="hero-center">
-            <p className="hero-tag">QA Automation Portfolio</p>
-
-            <div className="open-to-work">
-              🟢 Open to QA Automation / SDET Opportunities
+            <div className="hero-top">
+              <p className="hero-tag">QA Automation Portfolio</p>
+              <div className="open-to-work">
+                <span className="status-dot"></span>
+                <span>Open to QA Automation / SDET Opportunities</span>
+              </div>
             </div>
 
             <h1>Shubham Vyas</h1>
+
             <h2>
               QA Automation Engineer specializing in Selenium, API Testing &
               CI/CD
@@ -88,6 +92,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </main>
 

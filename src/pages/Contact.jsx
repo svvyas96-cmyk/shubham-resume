@@ -90,39 +90,46 @@ export default function Contact() {
             Send Message
           </h3>
 
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
+          <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/success"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="hidden" name="bot-field" />
 
-            <div className="input-group">
-              <FaUser className="input-icon" />
-              <input type="text" name="name" placeholder="Your Name" required />
-            </div>
+  <div className="input-group">
+    <FaUser className="input-icon" />
+    <input type="text" name="name" placeholder="Your Name" required />
+  </div>
 
-            <div className="input-group">
-              <FaEnvelope className="input-icon" />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
+  <div className="input-group">
+    <FaEnvelope className="input-icon" />
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    />
+  </div>
 
-            <div className="input-group textarea-group">
-              <FaCommentDots className="input-icon textarea-icon" />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
+  <div className="input-group textarea-group">
+    <FaCommentDots className="input-icon textarea-icon" />
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      rows="5"
+      required
+    ></textarea>
+  </div>
 
-            <button type="submit">
-              <FaPaperPlane />
-              Send Message
-            </button>
-          </form>
+  <button type="submit">
+    <FaPaperPlane />
+    Send Message
+  </button>
+</form>
         </div>
       </div>
     </section>
