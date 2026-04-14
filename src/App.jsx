@@ -34,7 +34,7 @@ export default function App() {
 
             <div className="hero-buttons">
               <a
-                href="/public/Shubham_Vyas_(QA_Test_Engineer_AT)_RESUME.pdf"
+                href="/Shubham_Vyas_(QA_Test_Engineer_AT)_RESUME.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary"
