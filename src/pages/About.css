@@ -1,7 +1,8 @@
 .about-page {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: clamp(20px, 3vw, 30px);
+  width: 100%;
 }
 
 /* HEADER */
@@ -21,9 +22,10 @@
 }
 
 .about-header h2 {
-  font-size: 34px;
+  font-size: clamp(24px, 4vw, 34px);
   margin-bottom: 10px;
   color: #111827;
+  line-height: 1.2;
 }
 
 .about-intro {
@@ -31,49 +33,70 @@
   margin: 0 auto;
   color: #4b5563;
   line-height: 1.7;
+  font-size: clamp(14px, 2vw, 16px);
+  padding: 0 10px;
 }
 
 /* GRID */
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
+  align-items: start;
 }
 
 .about-card {
   background: #f8fbff;
   border: 1px solid #e5edf8;
   border-radius: 18px;
-  padding: 22px;
+  padding: clamp(18px, 3vw, 22px);
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
 }
 
 .about-card h3 {
   margin-bottom: 12px;
   color: #111827;
+  font-size: clamp(18px, 2.5vw, 20px);
+  line-height: 1.3;
 }
 
 .about-card p {
   color: #444;
   line-height: 1.7;
+  font-size: clamp(14px, 2vw, 15px);
 }
 
 .about-card ul {
   padding-left: 18px;
   color: #374151;
   line-height: 1.8;
+  font-size: clamp(14px, 2vw, 15px);
+}
+
+.about-card li {
+  margin-bottom: 6px;
 }
 
 /* STRENGTHS */
 .about-section {
   background: #fff;
-  padding: 24px;
+  padding: clamp(18px, 3vw, 24px);
   border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef2f7;
 }
 
 .about-section h3 {
   margin-bottom: 15px;
+  color: #111827;
+  font-size: clamp(18px, 2.5vw, 22px);
 }
 
 .strengths {
@@ -85,12 +108,24 @@
 .strengths span {
   padding: 10px 14px;
   background: #eef4ff;
+  border: 1px solid #dbeafe;
   border-radius: 999px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: clamp(13px, 2vw, 14px);
+  color: #1f2937;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
-/* MOBILE */
+.strengths span:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.16);
+}
+
+/* TABLET */
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -98,5 +133,75 @@
 
   .about-header h2 {
     font-size: 28px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-page {
+    gap: 22px;
+  }
+
+  .about-intro {
+    padding: 0;
+  }
+
+  .about-card,
+  .about-section {
+    border-radius: 16px;
+    padding: 18px;
+  }
+
+  .strengths {
+    gap: 10px;
+  }
+
+  .strengths span {
+    padding: 9px 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    gap: 18px;
+  }
+
+  .about-header h2 {
+    font-size: 24px;
+  }
+
+  .about-tag {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .about-intro {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-card,
+  .about-section {
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+
+  .about-card h3,
+  .about-section h3 {
+    font-size: 17px;
+  }
+
+  .about-card p,
+  .about-card ul {
+    font-size: 14px;
+  }
+
+  .strengths {
+    gap: 8px;
+  }
+
+  .strengths span {
+    font-size: 12px;
+    padding: 8px 12px;
   }
 }

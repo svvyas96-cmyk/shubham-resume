@@ -2,12 +2,13 @@ import React from "react";
 import "./App.css";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-
 
 export default function App() {
   return (
@@ -24,12 +25,22 @@ export default function App() {
 
           <div className="hero-center">
             <p className="hero-tag">QA Automation Portfolio</p>
+
+            <div className="open-to-work">
+              🟢 Open to QA Automation / SDET Opportunities
+            </div>
+
             <h1>Shubham Vyas</h1>
-            <h2>QA Automation Engineer specializing in Selenium, API Testing & CI/CD (5+ Years)</h2>
+            <h2>
+              QA Automation Engineer specializing in Selenium, API Testing &
+              CI/CD
+            </h2>
+
             <p className="hero-description">
-              I build reliable test solutions with a strong focus on product
-              quality, UI validation, API testing, automation frameworks, and
-              defect prevention.
+              QA Automation Engineer with 5+ years of experience in building
+              scalable automation frameworks, improving regression efficiency,
+              validating APIs, and ensuring high-quality software delivery in
+              Agile environments.
             </p>
 
             <div className="hero-buttons">
@@ -41,6 +52,7 @@ export default function App() {
               >
                 View Resume
               </a>
+
               <Link to="/contact" className="btn btn-secondary">
                 Contact Me
               </Link>
@@ -66,15 +78,7 @@ export default function App() {
         </div>
       </header>
 
-      <nav className="navbar">
-        <div className="navbar-inner">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/skills">Skills</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="main-content">
         <Routes>
@@ -84,7 +88,6 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" />} />
-          
         </Routes>
       </main>
 

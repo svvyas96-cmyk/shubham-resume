@@ -1,7 +1,7 @@
 .projects-page {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 28px;
 }
 
 .projects-header {
@@ -20,76 +20,128 @@
 }
 
 .projects-header h2 {
-  font-size: 34px;
+  font-size: clamp(26px, 4vw, 34px);
   margin-bottom: 12px;
   color: #111827;
+  line-height: 1.2;
 }
 
 .projects-intro {
   max-width: 760px;
   margin: 0 auto;
   color: #4b5563;
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.8;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
+/* GRID */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 22px;
 }
 
+/* CARD */
 .project-card {
-  background: #f8fbff;
+  background: #ffffff;
   border: 1px solid #e5edf8;
-  border-radius: 18px;
+  border-radius: 20px;
   padding: 24px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.1);
+  border-color: #dbeafe;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -45%;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.28),
+    transparent
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-top {
+  margin-bottom: 18px;
+}
+
+.project-category {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .project-subtitle {
   font-size: 13px;
   font-weight: 700;
   color: #2563eb;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
+  line-height: 1.6;
 }
 
 .project-card h3 {
-  font-size: 22px;
+  font-size: clamp(20px, 3vw, 24px);
   margin-bottom: 12px;
   color: #111827;
+  line-height: 1.35;
 }
 
 .project-description {
   color: #4b5563;
-  line-height: 1.7;
-  margin-bottom: 18px;
+  line-height: 1.8;
+  font-size: 15px;
 }
 
-.project-section {
+/* BLOCKS */
+.project-block {
   margin-top: 18px;
 }
 
-.project-section h4 {
+.project-block h4 {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #1f2937;
+  color: #111827;
 }
 
-.project-section ul {
+.project-block ul {
   padding-left: 18px;
   color: #374151;
   line-height: 1.8;
 }
 
+.project-block li {
+  margin-bottom: 6px;
+}
+
+/* TOOLS */
 .project-tools {
   display: flex;
   flex-wrap: wrap;
@@ -97,21 +149,76 @@
 }
 
 .project-tools span {
-  background: white;
+  background: #f8fbff;
   border: 1px solid #dbe7ff;
   color: #1f2937;
   padding: 9px 13px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
+  transition: all 0.25s ease;
+  cursor: default;
 }
 
+.project-tools span:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.16);
+}
+
+/* TABLET */
 @media (max-width: 900px) {
+  .projects-page {
+    gap: 24px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
-  .projects-header h2 {
-    font-size: 28px;
+  .project-card {
+    padding: 22px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .projects-header {
+    text-align: left;
+  }
+
+  .projects-intro {
+    margin: 0;
+  }
+
+  .project-card {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .project-tools {
+    gap: 8px;
+  }
+
+  .project-tools span {
+    font-size: 12px;
+    padding: 8px 11px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .projects-page {
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 18px 16px;
+  }
+
+  .project-block ul {
+    padding-left: 16px;
   }
 }
