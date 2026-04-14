@@ -91,10 +91,11 @@ export default function Contact() {
           </h3>
 
           <form
- name="contact"
+  name="contact"
   method="POST"
   data-netlify="true"
   netlify-honeypot="bot-field"
+  action="/success.html"
 >
   <input type="hidden" name="form-name" value="contact" />
   <input type="hidden" name="bot-field" />
@@ -106,12 +107,7 @@ export default function Contact() {
 
   <div className="input-group">
     <FaEnvelope className="input-icon" />
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-    />
+    <input type="email" name="email" placeholder="Your Email" required />
   </div>
 
   <div className="input-group textarea-group">
