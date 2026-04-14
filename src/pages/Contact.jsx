@@ -51,18 +51,17 @@ export default function Contact() {
         <div className="contact-form">
           <h3>Send Message</h3>
 
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            action="/success"
->
-  {/* hidden input required */}
+          <form name="contact" method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
 
   <input type="text" name="name" placeholder="Your Name" required />
   <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" rows="5" required />
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    rows="5"
+    required
+  ></textarea>
 
   <button type="submit">Send Message</button>
 </form>

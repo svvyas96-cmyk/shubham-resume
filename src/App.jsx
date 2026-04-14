@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Success from "./pages/Success";
+
 
 export default function App() {
   return (
@@ -84,7 +84,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" />} />
-          <Route path="/success" element={<Success />} />
+          
         </Routes>
       </main>
 
