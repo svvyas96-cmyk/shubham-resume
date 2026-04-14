@@ -25,7 +25,7 @@ export default function App() {
           <div className="hero-center">
             <p className="hero-tag">QA Automation Portfolio</p>
             <h1>Shubham Vyas</h1>
-            <h2>QA Automation Engineer</h2>
+            <h2>QA Automation Engineer specializing in Selenium, API Testing & CI/CD (5+ Years)</h2>
             <p className="hero-description">
               I build reliable test solutions with a strong focus on product
               quality, UI validation, API testing, automation frameworks, and

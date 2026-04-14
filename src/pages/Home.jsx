@@ -4,7 +4,31 @@ import "./Home.css";
 export default function Home() {
   return (
     <section className="home">
+<div className="impact-section">
+  <h2>What I Deliver</h2>
 
+  <div className="impact-list">
+    <div className="impact-item">
+      ✔ Reduced regression effort by 40% using automation
+    </div>
+
+    <div className="impact-item">
+      ✔ Built scalable Selenium framework from scratch
+    </div>
+
+    <div className="impact-item">
+      ✔ Automated API testing using Rest Assured
+    </div>
+
+    <div className="impact-item">
+      ✔ Integrated automation with Jenkins CI/CD pipelines
+    </div>
+
+    <div className="impact-item">
+      ✔ Improved test coverage and reduced production defects
+    </div>
+  </div>
+</div>
       {/* SECTION 1 - About Preview */}
       <div className="home-section">
         <h2>About Me</h2>

@@ -126,3 +126,51 @@
     font-size: 28px;
   }
 }
+/* OPEN TO WORK BADGE */
+.open-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #e6f9ec;
+  color: #16a34a;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* HIGHLIGHT CARD */
+.info-card.highlight {
+  background: #eef4ff;
+  border: 1px solid #c7dbff;
+}
+
+/* BETTER LINKS */
+.info-card a {
+  display: inline-block;
+  margin-top: 6px;
+  color: #2563eb;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.info-card a:hover {
+  text-decoration: underline;
+}
+
+/* FORM BUTTON IMPROVE */
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
