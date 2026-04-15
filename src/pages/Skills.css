@@ -52,6 +52,9 @@
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-card:hover {
@@ -105,9 +108,12 @@ body.dark-theme .skill-list span {
 
 /* TABLET */
 @media (max-width: 900px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+ .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
 
   .skills-header h2 {
     font-size: 28px;
@@ -175,4 +181,143 @@ body.dark-theme .skill-list span {
     font-size: 12px;
     padding: 8px 12px;
   }
+}
+.premium-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card-solid);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: clamp(13px, 2vw, 14px);
+  font-weight: 600;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.skill-chip:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.16);
+}
+
+.skill-chip:hover .skill-icon {
+  background: transparent;
+  color: #ffffff;
+}
+
+body.dark-theme .skill-chip {
+  background: #1e293b;
+  border-color: rgba(148, 163, 184, 0.18);
+  color: #e2e8f0;
+}
+.premium-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card-solid);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: clamp(13px, 2vw, 14px);
+  font-weight: 600;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.skill-chip:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.16);
+}
+
+/* keep icons visible on hover */
+.skill-chip:hover .skill-icon svg {
+  color: currentColor;
+}
+
+/* dark mode */
+body.dark-theme .skill-chip {
+  background: #1e293b;
+  border-color: rgba(148, 163, 184, 0.18);
+  color: #e2e8f0;
+}
+
+/* brand icon colors */
+.icon-selenium {
+  color: #43b02a;
+}
+
+.icon-java {
+  color: #f59e0b;
+}
+
+.icon-postman {
+  color: #ff6c37;
+}
+
+.icon-jira {
+  color: #2684ff;
+}
+
+.icon-api {
+  color: #3b82f6;
+}
+
+.icon-bug {
+  color: #ef4444;
+}
+
+.icon-db {
+  color: #2563eb;
+}
+
+.icon-default {
+  color: #64748b;
+}
+
+/* on hover, make all icons consistent */
+.skill-chip:hover .icon-selenium,
+.skill-chip:hover .icon-java,
+.skill-chip:hover .icon-postman,
+.skill-chip:hover .icon-jira,
+.skill-chip:hover .icon-api,
+.skill-chip:hover .icon-bug,
+.skill-chip:hover .icon-db,
+.skill-chip:hover .icon-default {
+  color: #ffffff;
 }

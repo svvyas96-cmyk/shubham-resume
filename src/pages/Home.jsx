@@ -5,31 +5,46 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <section className="home">
-      <div className="impact-section">
-        <h2>What I Deliver</h2>
+  <div className="deliver-section">
+  <div className="deliver-header">
+    <h3>What I Deliver</h3>
+    <p className="deliver-subtext">
+      Practical QA outcomes that improve release confidence, coverage, and speed.
+    </p>
+  </div>
 
-        <div className="impact-list">
-          <div className="impact-item">
-            ✔ Reduced regression effort by 40% through automation
-          </div>
+  <div className="deliver-grid">
+    <div className="deliver-card">
+      <span className="deliver-badge">Automation</span>
+      <p>Reduced regression effort by 40% through automation</p>
+    </div>
 
-          <div className="impact-item">
-            ✔ Built scalable Selenium automation framework from scratch
-          </div>
+    <div className="deliver-card">
+      <span className="deliver-badge">Framework</span>
+      <p>Built scalable Selenium automation framework from scratch</p>
+    </div>
 
-          <div className="impact-item">
-            ✔ Automated API validation using Rest Assured and Postman
-          </div>
+    <div className="deliver-card">
+      <span className="deliver-badge">API</span>
+      <p>Automated API validation using Rest Assured and Postman</p>
+    </div>
 
-          <div className="impact-item">
-            ✔ Integrated automation suites with Jenkins CI/CD pipelines
-          </div>
+    <div className="deliver-card">
+      <span className="deliver-badge">CI/CD</span>
+      <p>Integrated automation suites with Jenkins CI/CD pipelines</p>
+    </div>
 
-          <div className="impact-item">
-            ✔ Improved test coverage and helped reduce production defects
-          </div>
-        </div>
-      </div>
+    <div className="deliver-card">
+      <span className="deliver-badge">Quality</span>
+      <p>Improved test coverage and helped reduce production defects</p>
+    </div>
+
+    <div className="deliver-card">
+      <span className="deliver-badge">Impact</span>
+      <p>Ready to deliver immediate impact with scalable automation and faster release cycles</p>
+    </div>
+  </div>
+</div>
 
       <div className="home-section">
         <h2>About Me</h2>

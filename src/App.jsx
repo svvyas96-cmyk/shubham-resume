@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -134,6 +135,7 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>

@@ -9,7 +9,8 @@ import {
   FaTools,
   FaProjectDiagram,
   FaEnvelope,
-  FaFileAlt
+  FaFileAlt,
+  FaBriefcase
 } from "react-icons/fa";
 import "./Navbar.css";
 
@@ -31,10 +32,12 @@ export default function Navbar() {
 
   const navItems = [
     { to: "/", label: "Home", icon: <FaHome /> },
-    { to: "/about", label: "About", icon: <FaUser /> },
+    { to: "/about", label: "About Me", icon: <FaUser /> },
+    { to: "/experience", label: "Experience", icon: <FaBriefcase /> },
     { to: "/skills", label: "Skills", icon: <FaTools /> },
     { to: "/projects", label: "Projects", icon: <FaProjectDiagram /> },
     { to: "/contact", label: "Contact", icon: <FaEnvelope /> },
+    
   ];
 
   return (
