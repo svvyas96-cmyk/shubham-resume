@@ -29,6 +29,7 @@ export default function App() {
 
   return (
     <div className="app">
+       <Navbar />
       <header className="hero">
         <div className="hero-overlay"></div>
 
@@ -124,7 +125,7 @@ export default function App() {
         </div>
       </header>
 
-      <Navbar />
+     
 
       <main className="main-content">
         <Routes>
@@ -148,9 +149,9 @@ export default function App() {
 
         {/* CENTER */}
         <div className="footer-links">
-          <a href="mailto:vyass4800@gmail.com">
-            <FaEnvelope /> Email
-          </a>
+       <a href="mailto:vyass4800@gmail.com?subject=QA Opportunity&body=Hi Shubham,">
+  <FaEnvelope /> Email
+</a>
 
           <a
             href="https://www.linkedin.com/in/shubham-vyas96"

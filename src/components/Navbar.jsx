@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
 import {
   FaBars,
   FaTimes,
@@ -39,7 +40,13 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
-        <div className="navbar-brand">SV</div>
+       <Link to="/" className="navbar-brand" aria-label="Go to home" title="Shubham Vyas">
+  <span className="navbar-brand-mark">SV</span>
+  <span className="navbar-brand-text">
+    <strong>Shubham</strong>
+    <small>QA</small>
+  </span>
+</Link>
 
         <button
           className="menu-toggle"
